@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boat Controller</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="control-container">
+      <header>
+        <h1>Boat Controller</h1>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </header>
+      <div id="obstacleAlert" class="alert hidden">
+        ⚠️ OBSTACLE DETECTED! Motors stopped automatically.
+      </div>
+      <div class="status-panel">
+        <div class="status-item">
+          <span>GPS:</span>
+          <span id="gpsData">Waiting for signal...</span>
+        </div>
+        <div class="status-item">
+          <span>Distance:</span>
+          <span id="distanceData">-- cm</span>
+        </div>
+        <div class="status-item">
+          <span>Temperature:</span>
+          <span id="temperatureData">-- °C</span>
+        </div>
+        <div class="status-item">
+          <span>Humidity:</span>
+          <span id="humidityData">-- %</span>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <button
+          class="control-btn forward"
+          ontouchstart="sendCommand('FORWARD')"
+          onmousedown="sendCommand('FORWARD')"
+          ontouchend="sendCommand('STOP')"
+          onmouseup="sendCommand('STOP')"
+        >
+          Forward
+        </button>
+
+        <div class="row">
+          <button
+            class="control-btn left"
+            ontouchstart="sendCommand('LEFT')"
+            onmousedown="sendCommand('LEFT')"
+            ontouchend="sendCommand('STOP')"
+            onmouseup="sendCommand('STOP')"
+          >
+            Left
+          </button>
+          <button class="control-btn stop" onclick="sendCommand('STOP')">
+            Stop
+          </button>
+          <button
+            class="control-btn right"
+            ontouchstart="sendCommand('RIGHT')"
+            onmousedown="sendCommand('RIGHT')"
+            ontouchend="sendCommand('STOP')"
+            onmouseup="sendCommand('STOP')"
+          >
+            Right
+          </button>
+        </div>
+
+        <button
+          class="control-btn reverse"
+          ontouchstart="sendCommand('REVERSE')"
+          onmousedown="sendCommand('REVERSE')"
+          ontouchend="sendCommand('STOP')"
+          onmouseup="sendCommand('STOP')"
+        >
+          Reverse
+        </button>
+      </div>
+
+      <div class="speed-control">
+        <h3>Speed: <span id="speedValue">150</span></h3>
+        <input type="range" min="0" max="255" value="150" id="speedSlider" />
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

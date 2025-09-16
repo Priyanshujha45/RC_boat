@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+.login-container, .control-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.status-panel {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.status-item {
+    margin: 10px 0;
+}
+
+.control-panel {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.control-btn {
+    padding: 15px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.forward { background-color: #2ecc71; }
+.stop { background-color: #e74c3c; }
+.left, .right { background-color: #3498db; }
+.reverse { background-color: #9b59b6; }
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.speed-control {
+    margin: 20px 0;
+}
+
+.speed-control input {
+    width: 100%;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+.alert {
+    padding: 15px;
+    background-color: #ff4444;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    animation: blink 1s linear infinite;
+  }
+  
+.hidden {
+    display: none;
+  }
+  
+@keyframes blink {
+    50% { opacity: 0.7; }
+}

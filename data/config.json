@@ -1,0 +1,7 @@
+{
+    "ssid": "BoatController",
+    "password": "securepass123",
+    "loginPassword": "admin123",
+    "defaultSpeed": 150,
+    "maxSpeed": 255
+}
